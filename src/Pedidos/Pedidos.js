@@ -58,53 +58,49 @@ const Pedidos = (props) => {
         <Container style={{ width: '100vh'}}>
             <Row sm="6"> 
                 <Col md="12" sm="12">
-                <Alert show={show} variant="success">
-                    <Alert.Heading>Pedido Finalizado</Alert.Heading>
-                        <p>
-                            Seu pedido foi contabilizado e irá partir para a entrega após a postagem
-                        </p>
-                        <hr />
-                    <div className="d-flex justify-content-end">
-                    <Button onClick={() => setShow(false)} variant="outline-success">
-                        Fechar
-                    </Button>
-                    </div>
-                </Alert>
+                    <Alert show={show} variant="success">
+                        <Alert.Heading>Pedido Finalizado</Alert.Heading>
+                            <p>
+                                Seu pedido foi contabilizado e irá partir para a entrega após a postagem
+                            </p>
+                            <hr />
+                        <div className="d-flex justify-content-end">
+                        <Button onClick={() => setShow(false)} variant="outline-success">
+                            Fechar
+                        </Button>
+                        </div>
+                    </Alert>
                     <Card>
                         <Card.Header>Pedido #1</Card.Header>
                         <Card.Body>
                             <blockquote className="blockquote mb-0">
                             <p style={{marginLeft: '20px'}}>
-                                <Row sm="12">
-                                    <p>
-                                        Game of Thrones: {props.quantGOT}
-                                    </p>
-                                </Row>
-                                <Row sm="12">
-                                    <p>
-                                        Jogos Vorazes: {props.quantJV}
-                                    </p>
-                                </Row>
-                                <Row sm="12">
-                                    <p>
-                                        Percy Jackson: {props.quantPJ}
-                                    </p>
-                                </Row> 
-                                <Row sm="12">
-                                    <p>
-                                        Harry Potter: {props.quantHP}
-                                    </p>
-                                </Row>
-                                <Row sm="12">
-                                    <p>
-                                        Coleçao Nietzsche: {props.quantNT}
-                                    </p>
-                                </Row>
-                                <Row sm="12"    >
-                                    <p>
-                                        Desconto: {calculaDesconto()*100}%
-                                    </p>
-                                </Row>
+                                {(props.quantGOT)? <Row sm="12">
+                                                        <p>
+                                                            Game of Thrones: {props.quantGOT}
+                                                        </p>
+                                                    </Row> : ''}
+                               
+                                {(props.quantJV)? <Row sm="12">
+                                                        <p>
+                                                            Jogos Vorazes: {props.quantJV}
+                                                        </p>
+                                                    </Row> : ''}
+                                {(props.quantPJ)? <Row sm="12">
+                                                        <p>
+                                                            Percy Jackson: {props.quantPJ}
+                                                        </p>
+                                                    </Row> : ''}
+                                {(props.quantHP)? <Row sm="12">
+                                                        <p>
+                                                            Harry Potter: {props.quantHP}
+                                                        </p>
+                                                    </Row> : ''}
+                                {(props.quantNT)? <Row sm="12">
+                                                        <p>
+                                                            Coleção Nietzsche: {props.quantNT}
+                                                        </p>
+                                                    </Row> : ''}
                             </p>
                             <footer className="blockquote-footer">
                                 Preço total:  <cite title="Source Title">R$ {calculaPrecoTotal()} </cite>
