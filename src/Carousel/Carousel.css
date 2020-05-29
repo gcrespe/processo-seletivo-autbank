@@ -1,0 +1,24 @@
+.carousel-control-next-icon{
+    background-color: black;
+    color: white;
+}
+
+.button{
+    border:none;
+    outline:none;
+}
+
+.button:hover{
+    border:none;
+    outline:none;
+}
+
+.button:active{
+    border:none;
+    outline:none;
+}
+
+.button:focus{
+    border:none;
+    outline:none;
+}
