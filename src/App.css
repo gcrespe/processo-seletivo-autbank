@@ -1,6 +1,6 @@
 .button{
     background-color: transparent;
-    width: 7rem;
+    width: 5rem;
     height: 2.5rem;
     border:none;
     outline: none;
@@ -10,7 +10,7 @@
 
 .button:hover{
     background-color: #9e2aad;
-    width: 9rem;
+    width: 7rem;
     color: white;
     letter-spacing: 3px;
 }
